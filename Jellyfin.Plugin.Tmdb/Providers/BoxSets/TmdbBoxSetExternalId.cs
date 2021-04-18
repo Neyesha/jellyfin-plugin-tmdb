@@ -4,7 +4,7 @@ using MediaBrowser.Controller.Providers;
 using MediaBrowser.Model.Entities;
 using MediaBrowser.Model.Providers;
 
-namespace Jellyfin.Plugin.Tmdb.Providers.BoxSets
+namespace Jellyfin.Plugin.TmdbAdult.Providers.BoxSets
 {
     /// <summary>
     /// External ID for a TMDB box set.

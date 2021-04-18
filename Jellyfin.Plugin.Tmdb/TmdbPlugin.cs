@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using Jellyfin.Plugin.Tmdb.Configuration;
+using Jellyfin.Plugin.TmdbAdult.Configuration;
 using MediaBrowser.Common.Configuration;
 using MediaBrowser.Common.Plugins;
 using MediaBrowser.Model.Plugins;
 using MediaBrowser.Model.Serialization;
 
-namespace Jellyfin.Plugin.Tmdb
+namespace Jellyfin.Plugin.TmdbAdult
 {
     /// <summary>
     /// Tmdb Plugin.

@@ -12,7 +12,7 @@ using MediaBrowser.Model.Entities;
 using MediaBrowser.Model.Extensions;
 using MediaBrowser.Model.Providers;
 
-namespace Jellyfin.Plugin.Tmdb.Providers.People
+namespace Jellyfin.Plugin.TmdbAdult.Providers.People
 {
     /// <summary>
     /// Tmdb person image provider.

@@ -4,7 +4,7 @@ using MediaBrowser.Controller.Providers;
 using MediaBrowser.Model.Entities;
 using MediaBrowser.Model.Providers;
 
-namespace Jellyfin.Plugin.Tmdb.Providers.Movies
+namespace Jellyfin.Plugin.TmdbAdult.Providers.Movies
 {
     /// <summary>
     /// External ID for a TMBD movie.

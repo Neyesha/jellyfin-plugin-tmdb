@@ -15,7 +15,7 @@ using MediaBrowser.Model.Extensions;
 using MediaBrowser.Model.Providers;
 using TMDbLib.Objects.Find;
 
-namespace Jellyfin.Plugin.Tmdb.Providers.Movies
+namespace Jellyfin.Plugin.TmdbAdult.Providers.Movies
 {
     /// <summary>
     /// Tmdb movie image provider.

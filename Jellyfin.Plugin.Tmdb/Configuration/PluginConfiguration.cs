@@ -1,6 +1,6 @@
-﻿using MediaBrowser.Model.Plugins;
+using MediaBrowser.Model.Plugins;
 
-namespace Jellyfin.Plugin.Tmdb.Configuration
+namespace Jellyfin.Plugin.TmdbAdult.Configuration
 {
     /// <summary>
     /// The plugin configuration.

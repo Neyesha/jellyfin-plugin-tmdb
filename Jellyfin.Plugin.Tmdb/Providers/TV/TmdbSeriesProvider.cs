@@ -15,7 +15,7 @@ using TMDbLib.Objects.Find;
 using TMDbLib.Objects.Search;
 using TMDbLib.Objects.TvShows;
 
-namespace Jellyfin.Plugin.Tmdb.Providers.TV
+namespace Jellyfin.Plugin.TmdbAdult.Providers.TV
 {
     /// <summary>
     /// Tmdb series provider.

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading;
@@ -13,7 +13,7 @@ using TMDbLib.Objects.People;
 using TMDbLib.Objects.Search;
 using TMDbLib.Objects.TvShows;
 
-namespace Jellyfin.Plugin.Tmdb
+namespace Jellyfin.Plugin.TmdbAdult
 {
     /// <summary>
     /// Manager class for abstracting the TMDb API client library.

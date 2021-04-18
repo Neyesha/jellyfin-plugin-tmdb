@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using MediaBrowser.Model.Entities;
 using TMDbLib.Objects.General;
 
-namespace Jellyfin.Plugin.Tmdb
+namespace Jellyfin.Plugin.TmdbAdult
 {
     /// <summary>
     /// Utilities for the TMDb provider.
