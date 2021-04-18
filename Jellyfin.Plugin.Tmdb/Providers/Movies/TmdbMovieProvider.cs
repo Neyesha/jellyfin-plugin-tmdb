@@ -114,9 +114,8 @@ namespace Jellyfin.Plugin.TmdbAdult.Providers.Movies
         public async Task<MetadataResult<Movie>?> GetMetadata(MovieInfo info, CancellationToken cancellationToken)
         {
             var tmdbId = info.GetProviderId(MetadataProvider.Tmdb);
-            var imdbId = info.GetProviderId(MetadataProvider.Imdb);
 
-            if (string.IsNullOrEmpty(tmdbId) && string.IsNullOrEmpty(imdbId))
+            if (string.IsNullOrEmpty(tmdbId))
             {
                 // ParseName is required here.
                 // Caller provides the filename with extension stripped and NOT the parsed filename
