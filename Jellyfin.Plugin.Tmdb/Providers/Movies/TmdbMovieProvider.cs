@@ -51,7 +51,7 @@ namespace Jellyfin.Plugin.TmdbAdult.Providers.Movies
             if (tmdbId == 0)
             {
                 var movieResults = await _tmdbClientManager
-                    .SearchMovieAsync(searchInfo.Name, searchInfo.MetadataLanguage, cancellationToken)
+                    .SearchMovieAsync(searchInfo.Name, searchInfo.Year ?? 0, searchInfo.MetadataLanguage, cancellationToken)
                     .ConfigureAwait(false);
                 var remoteSearchResults = new List<RemoteSearchResult>();
                 for (var i = 0; i < movieResults.Count; i++)
