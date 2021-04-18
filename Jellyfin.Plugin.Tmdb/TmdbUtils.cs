@@ -19,12 +19,12 @@ namespace Jellyfin.Plugin.TmdbAdult
         /// <summary>
         /// Name of the provider.
         /// </summary>
-        public const string ProviderName = "TheMovieDb";
+        public const string ProviderName = "TheMovieDbAdult";
 
         /// <summary>
         /// Gets the provider id.
         /// </summary>
-        public const string ProviderId = "Tmdb";
+        public const string ProviderId = "TmdbAdult";
 
         /// <summary>
         /// Maximum number of cast members to pull.
