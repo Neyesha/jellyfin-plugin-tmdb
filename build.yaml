@@ -1,16 +1,16 @@
 ---
-name: "TheMovieDb"
-guid: "963FD785-53E7-440C-80BD-71661BE1B7DF"
+name: "TheMovieDbAdult"
+guid: "6ce05665-2256-48a4-a2a8-f2bad5e0003c"
 version: "1.0.0.0"
 targetAbi: "10.7.0.0"
 framework: "net5.0"
-owner: "jellyfin"
-overview: "Get metadata from TheMovieDb"
+owner: "neydor"
+overview: "Get metadata for adult content from TheMovieDb"
 description: >
-  Get metadata from TheMovieDb
+  Get metadata for adult content from TheMovieDb
 category: "Metadata"
 artifacts:
-- "Jellyfin.Plugin.Tmdb.dll"
+- "Jellyfin.Plugin.TmdbAdult.dll"
 - "TMDbLib.dll"
 changelog: >
   Remove from Jellyfin core.

@@ -30,10 +30,10 @@ namespace Jellyfin.Plugin.TmdbAdult
         public static TmdbPlugin? Instance { get; private set; }
 
         /// <inheritdoc />
-        public override string Name => "TheMovieDb";
+        public override string Name => "TheMovieDbAdult";
 
         /// <inheritdoc />
-        public override Guid Id => new Guid("963FD785-53E7-440C-80BD-71661BE1B7DF");
+        public override Guid Id => new Guid("6ce05665-2256-48a4-a2a8-f2bad5e0003c");
 
         /// <inheritdoc />
         public IEnumerable<PluginPageInfo> GetPages()
