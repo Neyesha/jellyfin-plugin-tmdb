@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Caching.Memory;
@@ -290,16 +291,17 @@ namespace Jellyfin.Plugin.TmdbAdult
 
             await EnsureClientConfigAsync().ConfigureAwait(false);
 
-            var searchResults = await _tmDbClient
-                .SearchTvShowAsync(name, TmdbUtils.NormalizeLanguage(language), cancellationToken: cancellationToken)
+            var tmdbResult = await _tmDbClient
+                .SearchTvShowAsync(name, TmdbUtils.NormalizeLanguage(language), includeAdult: true, cancellationToken: cancellationToken)
                 .ConfigureAwait(false);
 
-            if (searchResults.Results.Count > 0)
+            var searchResults = tmdbResult.Results;
+            if (searchResults.Count > 0)
             {
                 _memoryCache.Set(key, searchResults, TimeSpan.FromHours(CacheDurationInHours));
             }
 
-            return searchResults.Results;
+            return searchResults;
         }
 
         /// <summary>
@@ -318,16 +320,18 @@ namespace Jellyfin.Plugin.TmdbAdult
 
             await EnsureClientConfigAsync().ConfigureAwait(false);
 
-            var searchResults = await _tmDbClient
-                .SearchPersonAsync(name, cancellationToken: cancellationToken)
+            var tmdbResult = await _tmDbClient
+                .SearchPersonAsync(name, includeAdult: true, cancellationToken: cancellationToken)
                 .ConfigureAwait(false);
 
-            if (searchResults.Results.Count > 0)
+            var searchResults = tmdbResult.Results.Where(x => x.Adult).ToList();
+
+            if (searchResults.Count > 0)
             {
                 _memoryCache.Set(key, searchResults, TimeSpan.FromHours(CacheDurationInHours));
             }
 
-            return searchResults.Results;
+            return searchResults;
         }
 
         /// <summary>
@@ -360,16 +364,17 @@ namespace Jellyfin.Plugin.TmdbAdult
 
             await EnsureClientConfigAsync().ConfigureAwait(false);
 
-            var searchResults = await _tmDbClient
-                .SearchMovieAsync(name, TmdbUtils.NormalizeLanguage(language), year: year, cancellationToken: cancellationToken)
+            var tmdbResult = await _tmDbClient
+                .SearchMovieAsync(name, TmdbUtils.NormalizeLanguage(language), includeAdult: true, year: year, cancellationToken: cancellationToken)
                 .ConfigureAwait(false);
 
-            if (searchResults.Results.Count > 0)
+            var searchResults = tmdbResult.Results.Where(x => x.Adult).ToList();
+            if (searchResults.Count > 0)
             {
                 _memoryCache.Set(key, searchResults, TimeSpan.FromHours(CacheDurationInHours));
             }
 
-            return searchResults.Results;
+            return searchResults;
         }
 
         /// <summary>
