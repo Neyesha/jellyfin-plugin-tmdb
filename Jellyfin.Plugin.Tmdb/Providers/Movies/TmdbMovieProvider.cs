@@ -130,7 +130,7 @@ namespace Jellyfin.Plugin.TmdbAdult.Providers.Movies
 
             if (string.IsNullOrEmpty(tmdbId))
             {
-                return new MetadataResult<Movie> { HasMetadata = false };
+                return new MetadataResult<Movie>();
             }
 
             var movieResult = await _tmdbClientManager
@@ -139,7 +139,7 @@ namespace Jellyfin.Plugin.TmdbAdult.Providers.Movies
 
             if (movieResult == null)
             {
-                return new MetadataResult<Movie> { HasMetadata = false };
+                return new MetadataResult<Movie>();
             }
 
             var movie = new Movie
